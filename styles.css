@@ -1,0 +1,466 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    max-height: 600px;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Đảm bảo không có thành phần nào bị tràn ra */
+}
+
+.profile-left, .profile-right {
+    position: relative;
+    height: 100%;  /* Chiều cao chiếm toàn bộ chiều cao của profile */
+}
+
+.profile-left {
+    width: 45%;
+}
+
+.profile-right {
+    width: 55%;
+}
+
+.btn-home{
+    display: none;
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    max-width: 210px;
+    margin-left: 50px;
+    top: 40px;
+    color: #526D82;
+}
+
+.text-section {
+    max-width: 550px;
+    margin-right: 50px;
+    margin-left: 50px;
+    position: absolute;
+    top: 120px;
+}
+
+.text-section h1 {
+    font-size: 38px;
+    color: #526D82;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: opacity 300ms ease-out;
+}
+
+.text-section h2 {
+    font-size: 30px;
+    color: #9DB2BF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: opacity 300ms ease-out;
+}
+
+.text-section p {
+    font-size: 24px;
+    color: #6B7280;
+    margin-top: 10px;
+    transition: opacity 300ms ease-out;
+    margin-bottom: 10px;
+}
+
+#text-about1{
+    display: none;
+    font-size: 24px;
+    text-indent: 30px;
+    margin-top: 0;
+    margin-bottom: 0px; /* Khoảng cách giữa các đoạn */
+    text-align: justify;
+    text-justify: inter-word;
+}
+#text-about2{
+    display: none;
+    font-size: 24px;
+    text-indent: 30px;
+    margin-bottom: 0px; /* Khoảng cách giữa các đoạn */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+hr {
+    width: 100%;
+    margin-top: 0;
+    border: none; /* Xóa bỏ border mặc định */
+    height: 1px; /* Độ dày của đường kẻ */
+    background-color: black; /* Màu sắc của đường kẻ */
+}
+
+#cv a{
+    text-decoration: none;
+    color: #526D82;
+}
+
+#cv a:hover{
+    color: #fff;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 20px;
+    transition: all 300ms ease-out;
+}
+
+.btn {
+    padding: 12px 50px;
+    font-size: 24px;
+    font-weight:600;
+    border: 3px solid #526D82;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 60px;
+}
+
+.btn#about {
+    background-color: #526D82;
+    color: #fff;
+}
+
+.btn#cv {
+    background-color: #fff;
+    color: #526D82;
+}
+
+.btn#cv:hover {
+    background-color: #526D82;
+    color: #fff;
+}
+.btn#about:hover{
+    background-color: #fff;
+    color: #526D82;
+}
+
+.btn#project{
+    padding: 12px 42px;
+    background-color: #fff;
+    color: #526D82;
+}
+.btn#project:hover{
+    background-color: #526D82;
+    color: #fff;
+}
+
+.btn#experience{
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #526D82;
+}
+.btn#experience:hover{
+    background-color: #526D82;
+    color: #fff;
+}
+
+.social-icons {
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+}
+
+.social-icons img {
+    width: 50px;
+    margin-right: 25px;
+}
+
+.image-section {
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: absolute;
+    top: 30px;
+    right: 110px;
+
+    transition: all 0.3s ease;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name-date{
+    position: absolute;
+    bottom: 65px;
+    right: 190px;
+    font-size: 15px;
+    color: #526D82;
+    text-align: center;
+
+    transition: opacity 300ms ease-out;
+}
+.name-date h1{
+    margin: 0px;
+    padding: 0px;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+#vertical-line {
+    position: absolute;
+    display: none;
+    width: 1px; /* Độ rộng của đường kẻ */
+    height: 200px; /* Chiều cao của đường kẻ */
+    top: 180px;
+    background-color: black; /* Màu sắc của đường kẻ */
+}
+
+
+.box-about{
+    display: none;
+    gap: 80px;
+    position: absolute;
+    top: 180px;
+    right: 10px;
+
+
+    transition: all 300ms ease-out;
+}
+
+#box-about1 img {
+    width: 60px;
+    height: 40px;
+}
+
+#box-about2 img {
+    width: 38px;
+    height: 38px;
+}
+
+.box-about div{
+    border: 2px solid #526D82;
+    border-radius: 10px;
+    height: 160px;
+    width: 280px;
+}
+
+.box-about div{
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+    align-items: center; /* Căn giữa nội dung theo chiều ngang */
+    /* overflow: hidden; */
+}
+
+.box-about h1{
+    font-size: 28px;
+    margin: 7px 0;
+    color: #526D82;
+}
+
+.box-about p{
+    margin: 5px 0;
+    color: #6B7280; 
+    font-size: 22px;
+}
+
+#p1{
+    display: block;
+    position: absolute;
+    bottom: -100px;
+}
+
+.format-project{
+    margin-left: 110px;
+}
+
+.buttons1{
+    position: absolute;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    width: 230px;
+    left: 150px;
+
+    transition: all 300ms ease-out;
+}
+
+.box-project{
+    display: none;
+    gap: 30px;
+    position: absolute;
+    top: 120px;
+    right: 10px;
+
+
+    transition: all 300ms ease-out;
+}
+
+.box-project div.box-project1{
+    border: 2px solid #526D82;
+    border-radius: 10px;
+    height: 400px;
+    width: 320px;
+}
+
+.box-project div.box-project1{
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+    align-items: center; /* Căn giữa nội dung theo chiều ngang */
+    /* overflow: hidden; */
+}
+
+.box-project1 img{
+    width: 248px;
+    height: 240px;
+    border-radius: 5%;
+}
+
+.box-project h1{
+    font-size: 20px;
+}
+
+.btn_inBox{
+    display: flex;
+    gap: 20px;
+}
+
+.btn_inBox button{
+    background-color: #ffffff;
+    padding: 6px;
+    width: 80px;
+    border: 2px solid #526D82;
+    border-radius: 5px;
+}
+#logo{
+
+    position: absolute;
+    top: -108px;
+    right: 300px;
+}
+#logo h1{
+    margin-top: 0;
+}
+
+#logo img{
+    width: 65px;
+    height: 65px;
+}
+
+.box-experience{
+    display: block;
+    gap: 30px;
+    position: absolute;
+    top: 120px;
+    right: 10px;
+
+    transition: all 300ms ease-out;
+}
+
+.box-experience div.container-experience{
+    border: 2px solid #526D82;
+    border-radius: 10px;
+    height: 350px;
+    width: 674px;
+}
+
+.skills-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .skills-container {
+    position: absolute;
+    width: 89%;
+    height: 46%;
+    top: 120px;
+    right: 10px;
+
+    transition: all 300ms ease-out;
+  }
+  
+  .skills-section {
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .skills-section h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .skills-list {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .checkmark {
+    font-size: 24px;
+    color: black;
+  }
+  
+  .skill-item div {
+    text-align: left;
+  }
+  
+  .divider {
+    border-left: 2px solid #bbb;
+    height: 100%;
+    margin: 0 20px;
+  }
+  
+  strong {
+    font-size: 16px;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+#logo-ex{
+
+    position: absolute;
+    top: -108px;
+    right: 277px;
+}
+#logo-ex h1{
+    margin-top: 0;
+    font-size: 20px;
+}
+
+#logo-ex img{
+    width: 100px;
+    height: 60px;
+}
